@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <title>Popup</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500&display=swap');
+      body{
+        padding: 0px;
+        margin: 0px;
+      }
+      #hero{
+        width:500px;
+        height :350px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color : #7CA982;
+      }
+      .main_container{
+        width:500px;
+        height :350px;
+        margin-top:80px;
+        background-color : #7CA982;
+        /* border-radius : 20px; */
+        color:white;
+        font-family : 'Roboto';
+        padding: 40px 20px;
+        font-size:24px;
+        display:flex;
+        justify-content: center;
+        align-items : center;
+        flex-direction : column ;
+      }
+      .para_div{
+        height: 100px;
+        width: 100%;
+        display:flex;
+        justify-content : start;
+        align-items : center;
+      }
+      .main_container span{
+        padding : 5px 10px;
+        background : #fff;
+        border-radius : 10px;
+        color: black;
+        
+      }
+      .main_container img{
+        margin-right:10px;
+      }
+
+      .status_div{
+        margin-bottom:20px;
+      }
+
+      .main_container button{
+        transition : all 0.3s ease-in-out ;
+        cursor : pointer;
+        margin:0px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 10px;
+        width: 225px;
+        height: 55px;
+        padding: 5px 10px;
+        font-family: 'Roboto';
+        font-size: 24px;
+        background-color: #FFF275;
+        border:none;
+        border: 2px solid black;
+        outline: none;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
+              0 2px 2px rgba(0,0,0,0.15), 
+              0 4px 4px rgba(0,0,0,0.15), 
+              0 8px 8px rgba(0,0,0,0.15);
+      }
+
+      .main_container button:hover{
+        transition : all 0.3s ease-in-out ;
+        transform: scale(1.1);
+      }
+
+      .visit_anchor{
+        text-decoration:none;
+        outline:none;
+        margin:none;
+        border:none;
+      }
+
+
+      /* loader */
+
+      .spinner {
+        width: 56px;
+        height: 56px;
+        display: grid;
+        border: 4.5px solid #0000;
+        border-radius: 50%;
+        border-color: #dbdcef #0000;
+        animation: spinner-e04l1k 1s infinite linear;
+      }
+
+      @keyframes spinner-e04l1k {
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hero" >
+      <div class="spinner" style = "display: none;" ></div>
+      <div class="main_container">
+        <div class="gram_div para_div">
+          <img src = "assets/images/co2.png" width = "48" height = "48" /><p> This website produces <span class = "gram_span">0.6</span> g of CO<sub>2</sub> everytime someone visits this website</p>
+        </div>
+        <div class="percent_div para_div">
+          <img src = "assets/images/cleanPercent.png" width = "48" height = "48" /><p>This website is <span class = "percent_span">60</span> % clean than other websites .</p>
+        </div>
+        <div class="status_div para_div">
+          <img src = "assets/images/greenStatus.png" width = "48" height = "48" /><p><span class = "status_span">Green</span> website</p> 
+        </div>
+        <a href="details.html" target = "_blank" class = "visit_anchor"><button class = "visit_btn">visit website <img src = "assets/images/visit1.png" width = "24" height = "24" /></button></a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
